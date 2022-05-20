@@ -1,0 +1,9 @@
+#1/bin/bash 
+https://azubiafrica.sharepoint.com/sites/AZUBIAFRICACSACOHORTL2-2copy/_layouts/15/embed.aspx?uniqueId=a0088511-e82e-4062-8785-2d268676c9ae&access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvYX
+           
+sum=0
+read n
+while read -r line || [[ -n "$line" ]]; do
+    sum=$(($sum + $line))
+done
+printf "%.3f" $(echo "scale=10; $sum/$n" | bc -l)
